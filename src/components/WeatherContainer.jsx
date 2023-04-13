@@ -13,13 +13,13 @@ function WeatherContainer({ city }) {
 		async function fetchData() {
 			setIsLoading(true);
 			const response = await fetch(
-				`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
+				`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`
 			);
 			const data = await response.json();
 			setData(data);
 			setIsLoading(false);
 		}
-		fetchData()
+		fetchData();
 	}, [city]);
 
 	return (
