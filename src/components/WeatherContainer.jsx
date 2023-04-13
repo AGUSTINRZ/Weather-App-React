@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import wind from "../assets/wind.png";
-import thermometer from "../assets/global-warming.png";
-import humidity from "../assets/humidity.png";
+import wind from "../assets/images/wind.png";
+import thermometer from "../assets/images/global-warming.png";
+import humidity from "../assets/images/humidity.png";
 import Loading from "./Loading";
 
 function WeatherContainer({ city }) {
