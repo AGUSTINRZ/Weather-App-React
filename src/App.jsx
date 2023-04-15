@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import WeatherContainer from "./components/WeatherContainer";
 import SearchBar from "./components/SearchBar";
-import Loading from "./components/Loading";
 
 function App() {
 

@@ -5,6 +5,9 @@ function WeatherContainer({ city }) {
 	const [isLoading, setIsLoading] = useState(true);
 	const [data, setData] = useState(null);
 	const API_KEY = "73dccbb1b77541cbad8143524231503";
+	const imgWind = './src/assets/images/wind.png';
+	const imgThermometer = './src/assets/images/global-warming.png';
+	const imgHumidity = './src/assets/images/humidity.png';
 
 	useEffect(() => {
 		async function fetchData() {
@@ -62,7 +65,7 @@ function WeatherContainer({ city }) {
 						</p>
 						<section className="flex flex-col md:flex-row md:justify-around gap-y-4 mt-4 text-gray-600">
 							<article className="flex justify-around items-center gap-2 py-4">
-								<img src={'src/assets/images/global-warming.png'} alt="" className="max-w-[120px]" />
+								<img src={imgThermometer} alt="" className="max-w-[120px]" />
 								<div className="text-center">
 									<h3 className="font-medium">Feels like:</h3>
 									<p>{data?.current?.feelslike_c}° C</p>
@@ -70,14 +73,14 @@ function WeatherContainer({ city }) {
 								</div>
 							</article>
 							<article className="flex justify-around items-center gap-2 py-4">
-								<img src={'src/assets/images/humidity.png'} alt="" className="max-w-[120px]" />
+								<img src={imgHumidity} alt="" className="max-w-[120px]" />
 								<div className="text-center">
 									<h3 className="font-medium">Humidity:</h3>
 									<span>{data?.current?.humidity}%</span>
 								</div>
 							</article>
 							<article className="flex justify-around items-center gap-2 py-4">
-								<img src={'src/assets/images/wind.png'} alt="" className="max-w-[120px]" />
+								<img src={imgWind} alt="" className="max-w-[120px]" />
 								<div className="text-center">
 									<h3 className="font-medium">Wind velocity:</h3>
 									<p>{data?.current?.wind_kph} Km/h</p>
