@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
-import humidity from "../../public/images/humidity.png";
-import thermometer from "../../public/images/global-warming.png";
-import wind from "../../public/images/wind.png";
+import humidity from "/public/images/humidity.png";
+import thermometer from "/public/images/global-warming.png";
+import wind from "/public/images/wind.png";
 
 function WeatherContainer({ city }) {
 	const [isLoading, setIsLoading] = useState(true);
